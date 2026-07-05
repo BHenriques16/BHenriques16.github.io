@@ -120,6 +120,14 @@ h2.section-title {
     margin-bottom: 48px;
 }
 
+h2.section-title-left {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 600;
+    color: var(--paper);
+    margin-bottom: 20px;
+}
+
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -300,8 +308,9 @@ h3 {
 
 .console-body li {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    gap: 16px;
+    gap: 6px 16px;
     padding: 12px 18px;
     font-size: 0.82rem;
     color: var(--muted);
@@ -317,6 +326,7 @@ h3 {
 
 .value.ok { color: var(--secure); }
 .value.blocked { color: var(--denied); }
+.value.neutral { color: var(--accent); }
 
 /* ============================================
    SECÇÕES GERAIS
@@ -500,6 +510,203 @@ section {
 .footer-icons a:hover { color: var(--accent); }
 
 /* ============================================
+   SOBRE MIM
+   ============================================ */
+.about-inner {
+    display: grid;
+    grid-template-columns: 0.85fr 1.6fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.id-badge {
+    background-color: var(--ink-800);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    padding: 32px;
+    text-align: center;
+}
+
+.badge-photo {
+    width: 88px;
+    height: 88px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+}
+
+.id-badge h3 {
+    margin-bottom: 4px;
+}
+
+.badge-role {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 22px;
+}
+
+.badge-meta {
+    list-style: none;
+    text-align: left;
+    border-top: 1px dashed var(--line-strong);
+    padding-top: 16px;
+}
+
+.badge-meta li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    padding: 6px 0;
+    color: var(--muted);
+}
+
+.badge-meta li span:last-child {
+    color: var(--paper);
+    font-weight: 500;
+}
+
+.about-text p {
+    color: var(--muted);
+    font-size: 1.02rem;
+    margin-bottom: 18px;
+    max-width: 62ch;
+}
+
+.tech-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.tech-strip span {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--paper);
+    background: var(--ink-800);
+    border: 1px solid var(--line-strong);
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+/* ============================================
+   TRABALHOS
+   ============================================ */
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.project-header-text {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.project-header-text h3 {
+    margin-bottom: 0;
+    font-size: 1.4rem;
+}
+
+.work-link {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--muted);
+    border: 1px solid var(--line-strong);
+    border-radius: 50%;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.work-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.works-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.work-card h3 {
+    font-size: 1.1rem;
+}
+
+.work-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.placeholder-work {
+    border-style: dashed;
+    border-color: var(--line-strong);
+}
+
+.placeholder-work:hover {
+    border-color: var(--muted-dim);
+    transform: none;
+}
+
+.badge.muted-badge {
+    background: var(--ink-700);
+    color: var(--muted);
+}
+
+/* ============================================
+   CONTACTO / CTA
+   ============================================ */
+.cta {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.cta-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 100%, #000 40%, transparent 100%);
+    mask-image: radial-gradient(ellipse 80% 60% at 50% 100%, #000 40%, transparent 100%);
+    pointer-events: none;
+}
+
+.cta-inner {
+    position: relative;
+}
+
+.cta-text {
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 auto 32px;
+}
+
+.cta-actions {
+    justify-content: center;
+}
+
+/* ============================================
    RESPONSIVO
    ============================================ */
 @media (max-width: 860px) {
@@ -509,8 +716,18 @@ section {
 
     h1 { font-size: 2.4rem; }
 
-    .grid-2-cols {
+    .grid-2-cols,
+    .works-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .id-badge {
+        max-width: 320px;
+        margin: 0 auto;
     }
 
     .nav-links { gap: 18px; }

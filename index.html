@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bernardo | Portefólio</title>
     <!-- Ligação ao nosso ficheiro de estilo -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <!-- Ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <!-- Fontes: Space Grotesk (títulos), Inter (corpo), JetBrains Mono (dados/labels) -->
@@ -19,8 +19,9 @@
         <div class="container nav-inner">
             <a href="#top" class="logo">bernardo<span class="accent">_</span></a>
             <nav class="nav-links">
+                <a href="#sobre">Sobre</a>
                 <a href="#competencias">Competências</a>
-                <a href="#projetos">Projeto</a>
+                <a href="#trabalhos">Trabalhos</a>
                 <a href="#" class="nav-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
             </nav>
         </div>
@@ -36,25 +37,56 @@
                 <p class="subtitle">Especialista júnior em Inteligência Artificial &amp; Data Science.</p>
                 <p class="description">Construo motores cognitivos seguros e otimizo infraestruturas de dados complexas.</p>
                 <div class="hero-actions">
-                    <a href="#projetos" class="btn-primary">Ver o meu trabalho</a>
-                    <a href="#competencias" class="btn-ghost">Competências</a>
+                    <a href="#trabalhos" class="btn-primary">Ver o meu trabalho</a>
+                    <a href="#sobre" class="btn-ghost">Sobre mim</a>
                 </div>
             </div>
 
             <div class="status-console" aria-hidden="true">
                 <div class="console-header">
                     <span class="dot"></span>
-                    <span>system.status</span>
+                    <span>bernardo.status</span>
                 </div>
                 <ul class="console-body">
-                    <li><span>AGENTE</span><span class="value ok">ONLINE</span></li>
-                    <li><span>BASE DE DADOS</span><span class="value ok">ISOLADA</span></li>
-                    <li><span>ZERO TRUST</span><span class="value ok">ATIVO</span></li>
-                    <li><span>SQL LIVRE</span><span class="value blocked">BLOQUEADO</span></li>
+                    <li><span>FOCO</span><span class="value ok">IA &amp; DADOS SEGUROS</span></li>
+                    <li><span>DISPONIBILIDADE</span><span class="value ok">ABERTO A DESAFIOS</span></li>
+                    <li><span>STACK</span><span class="value neutral">PYTHON / SQL / LLM</span></li>
+                    <li><span>MODO</span><span class="value ok">A CONSTRUIR</span></li>
                 </ul>
             </div>
         </div>
     </header>
+
+    <!-- Secção Sobre Mim -->
+    <section class="about" id="sobre">
+        <div class="container about-inner">
+            <div class="id-badge">
+                <div class="badge-photo" aria-hidden="true"><i class="fas fa-user"></i></div>
+                <h3>Bernardo Vieira Henriques</h3>
+                <p class="badge-role">Especialista Júnior &middot; IA &amp; Dados</p>
+                <ul class="badge-meta">
+                    <li><span>Formação</span><span>UBI</span></li>
+                    <li><span>Foco</span><span>Agentic AI</span></li>
+                    <li><span>Base</span><span>Portugal</span></li>
+                </ul>
+            </div>
+
+            <div class="about-text">
+                <p class="eyebrow">sobre mim</p>
+                <h2 class="section-title-left">Quem sou eu</h2>
+                <p>Sou estudante de Inteligência Artificial e Ciência de Dados, com gosto especial por construir sistemas que unem raciocínio automatizado a segurança de dados a sério.</p>
+                <p>Fora do código, gosto de explorar novas ferramentas de IA, ler sobre arquiteturas de sistemas distribuídos e transformar ideias soltas em protótipos funcionais.</p>
+                <div class="tech-strip" aria-label="Tecnologias">
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>FastAPI</span>
+                    <span>LLMs</span>
+                    <span>CrewAI</span>
+                    <span>Ollama</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Secção de Competências -->
     <section class="skills" id="competencias">
@@ -82,16 +114,20 @@
         </div>
     </section>
 
-    <!-- Secção do Projeto -->
-    <section class="projects" id="projetos">
+    <!-- Secção de Trabalhos -->
+    <section class="works" id="trabalhos">
         <div class="container">
-            <p class="eyebrow center">projeto</p>
-            <h2 class="section-title">Projeto em Destaque</h2>
+            <p class="eyebrow center">trabalhos</p>
+            <h2 class="section-title">Trabalhos</h2>
 
-            <div class="card project-card">
+            <div class="card project-card featured-work">
                 <div class="project-header">
-                    <span class="badge">Projeto Final</span>
-                    <h3>HORUS OMS</h3>
+                    <div class="project-header-text">
+                        <span class="badge">Em Destaque</span>
+                        <h3>HORUS OMS</h3>
+                    </div>
+                    <!-- Substitui pelo link real do repositório -->
+                    <a href="#" class="work-link" aria-label="Ver repositório no GitHub"><i class="fab fa-github"></i></a>
                 </div>
                 <p>Arquitetura Zero Trust para integração segura entre LLMs locais e bases de dados críticas (Agent-to-API).</p>
 
@@ -102,6 +138,35 @@
                         <p>O vídeo da demonstração ficará aqui</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="works-grid">
+                <!-- Espaço reservado para próximos trabalhos -->
+                <div class="card work-card placeholder-work">
+                    <span class="badge muted-badge">Em breve</span>
+                    <h3>Próximo projeto</h3>
+                    <p>Espaço reservado para o teu próximo trabalho.</p>
+                </div>
+                <div class="card work-card placeholder-work">
+                    <span class="badge muted-badge">Em breve</span>
+                    <h3>Próximo projeto</h3>
+                    <p>Espaço reservado para o teu próximo trabalho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção de Contacto -->
+    <section class="cta">
+        <div class="cta-grid-bg" aria-hidden="true"></div>
+        <div class="container cta-inner">
+            <p class="eyebrow center">contacto</p>
+            <h2 class="section-title">Vamos conversar?</h2>
+            <p class="cta-text">Estou disponível para estágios, projetos em colaboração ou só para trocar ideias sobre IA e segurança de dados.</p>
+            <!-- Substitui pelos teus contactos reais -->
+            <div class="hero-actions cta-actions">
+                <a href="mailto:#" class="btn-primary">Enviar email</a>
+                <a href="#" class="btn-ghost">Ver GitHub</a>
             </div>
         </div>
     </section>
