@@ -8,36 +8,72 @@
     <link rel="stylesheet" href="style.css">
     <!-- Ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Fonte limpa e legível (Inter) -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Fontes: Space Grotesk (títulos), Inter (corpo), JetBrains Mono (dados/labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Navegação -->
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="#top" class="logo">bernardo<span class="accent">_</span></a>
+            <nav class="nav-links">
+                <a href="#competencias">Competências</a>
+                <a href="#projetos">Projeto</a>
+                <a href="#" class="nav-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            </nav>
+        </div>
+    </header>
+
     <!-- Cabeçalho Principal -->
-    <header class="hero">
-        <div class="container text-center">
-            <h1>Olá, eu sou o Bernardo.</h1>
-            <p class="subtitle">Especialista júnior em Inteligência Artificial & Data Science.</p>
-            <p class="description">Construo motores cognitivos seguros e otimizo infraestruturas de dados complexas.</p>
-            <a href="#projetos" class="btn-primary">Ver o meu trabalho</a>
+    <header class="hero" id="top">
+        <div class="hero-grid-bg" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow">&gt; ia_&amp;_ciência_de_dados</p>
+                <h1>Olá, eu sou o <span class="accent">Bernardo</span>.</h1>
+                <p class="subtitle">Especialista júnior em Inteligência Artificial &amp; Data Science.</p>
+                <p class="description">Construo motores cognitivos seguros e otimizo infraestruturas de dados complexas.</p>
+                <div class="hero-actions">
+                    <a href="#projetos" class="btn-primary">Ver o meu trabalho</a>
+                    <a href="#competencias" class="btn-ghost">Competências</a>
+                </div>
+            </div>
+
+            <div class="status-console" aria-hidden="true">
+                <div class="console-header">
+                    <span class="dot"></span>
+                    <span>system.status</span>
+                </div>
+                <ul class="console-body">
+                    <li><span>AGENTE</span><span class="value ok">ONLINE</span></li>
+                    <li><span>BASE DE DADOS</span><span class="value ok">ISOLADA</span></li>
+                    <li><span>ZERO TRUST</span><span class="value ok">ATIVO</span></li>
+                    <li><span>SQL LIVRE</span><span class="value blocked">BLOQUEADO</span></li>
+                </ul>
+            </div>
         </div>
     </header>
 
     <!-- Secção de Competências -->
     <section class="skills" id="competencias">
         <div class="container">
+            <p class="eyebrow center">competências</p>
             <h2 class="section-title">O que eu faço</h2>
-            
+
             <div class="grid-2-cols">
                 <!-- Cartão 1 -->
                 <div class="card">
+                    <span class="card-tag">.ml</span>
                     <i class="fas fa-brain icon-highlight"></i>
-                    <h3>Data Science & ML</h3>
+                    <h3>Data Science &amp; ML</h3>
                     <p>Desenvolvimento de sistemas inteligentes, orquestração de Agentic AI e implementação de LLMs.</p>
                 </div>
-                
+
                 <!-- Cartão 2 -->
                 <div class="card">
+                    <span class="card-tag">.data</span>
                     <i class="fas fa-database icon-highlight"></i>
                     <h3>Infraestrutura de Dados</h3>
                     <p>Desenho, gestão e interação segura com bases de dados relacionais (MySQL, SQL Server, SQLite).</p>
@@ -49,15 +85,16 @@
     <!-- Secção do Projeto -->
     <section class="projects" id="projetos">
         <div class="container">
+            <p class="eyebrow center">projeto</p>
             <h2 class="section-title">Projeto em Destaque</h2>
-            
+
             <div class="card project-card">
                 <div class="project-header">
-                    <h3>HORUS OMS</h3>
                     <span class="badge">Projeto Final</span>
+                    <h3>HORUS OMS</h3>
                 </div>
                 <p>Arquitetura Zero Trust para integração segura entre LLMs locais e bases de dados críticas (Agent-to-API).</p>
-                
+
                 <!-- Espaço do Vídeo -->
                 <div class="video-container">
                     <div class="video-placeholder">
@@ -68,6 +105,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p>&copy; 2026 Bernardo Vieira Henriques</p>
+            <div class="footer-icons">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
