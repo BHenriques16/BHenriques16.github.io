@@ -335,12 +335,6 @@ section {
     padding: 90px 0;
 }
 
-.grid-2-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
 /* ============================================
    CARTÕES
    ============================================ */
@@ -356,30 +350,6 @@ section {
 .card:hover {
     transform: translateY(-4px);
     border-color: var(--line-strong);
-}
-
-.card-tag {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--accent);
-    background: var(--accent-dim);
-    padding: 3px 10px;
-    border-radius: 20px;
-    margin-bottom: 20px;
-}
-
-.icon-highlight {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 52px;
-    height: 52px;
-    font-size: 1.4rem;
-    color: var(--accent);
-    border: 1px solid var(--line-strong);
-    border-radius: var(--radius-sm);
-    margin-bottom: 20px;
 }
 
 .card p {
@@ -579,6 +549,38 @@ section {
 .badge-meta li span:last-child {
     color: var(--paper);
     font-weight: 500;
+}
+
+.badge-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--line-strong);
+}
+
+.badge-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--muted);
+    word-break: break-all;
+    transition: color 0.2s ease;
+}
+
+.badge-contact a:hover {
+    color: var(--accent);
+}
+
+.badge-contact i {
+    flex-shrink: 0;
+    width: 16px;
+    text-align: center;
+    color: var(--accent);
+    font-size: 0.9rem;
 }
 
 .about-text p {
@@ -810,7 +812,6 @@ section {
 
     h1 { font-size: 2.4rem; }
 
-    .grid-2-cols,
     .works-grid {
         grid-template-columns: 1fr;
     }
